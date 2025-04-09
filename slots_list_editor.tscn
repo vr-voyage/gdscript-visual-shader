@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://o8uljutswujh"]
+
+[ext_resource type="Script" path="res://slots_list_editor.gd" id="1_15hr4"]
+
+[node name="SlotList" type="VBoxContainer" node_paths=PackedStringArray("color_rect", "title_label", "items_list")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_15hr4")
+color_rect = NodePath("ColorRect")
+title_label = NodePath("ColorRect/Label")
+items_list = NodePath("ItemList")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+color = Color(0.132754, 0.132754, 0.132754, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inputs"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Add"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "Remove"
+
+[connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]

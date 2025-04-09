@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcewudmbm1cxc"]
+
+[ext_resource type="Script" path="res://board.gd" id="1_2ouen"]
+[ext_resource type="Script" path="res://moving_panel.gd" id="1_oc1tu"]
+[ext_resource type="PackedScene" uid="uid://haoltsbq6wuu" path="res://shanode.tscn" id="3_fa4rx"]
+
+[node name="Control" type="Panel" node_paths=PackedStringArray("debug_text", "nodes_origin")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ouen")
+debug_text = NodePath("PanelContainer/Label2")
+nodes_origin = NodePath("Origin")
+
+[node name="PanelContainer" type="PanelContainer" parent="." node_paths=PackedStringArray("debug_text")]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_oc1tu")
+debug_text = NodePath("Label")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Origin" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" parent="Origin" instance=ExtResource("3_fa4rx")]
+layout_mode = 0
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://jes1smij14vh"]
+
+[ext_resource type="Script" path="res://test_files/test_dynamic_node.gd" id="1_e2dex"]
+
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("ui_debug_output")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2dex")
+ui_debug_output = NodePath("PanelContainer/ScrollContainer/Label")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

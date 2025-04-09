@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tasvsh3wslq8"]
+
+[ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_nek2h"]
+[ext_resource type="Script" path="res://test_class_listing.gd" id="2_k0w65"]
+
+[node name="Control" type="VBoxContainer" node_paths=PackedStringArray("output")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nek2h")
+script = ExtResource("2_k0w65")
+output = NodePath("Label")
+
+[node name="Label" type="ItemList" parent="."]
+layout_mode = 2
+size_flags_vertical = 3

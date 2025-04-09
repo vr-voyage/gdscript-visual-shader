@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3nblg5jm24el"]
+
+[ext_resource type="PackedScene" uid="uid://cu6pqpxf3a6v5" path="res://ui/select_type_grid_menu.tscn" id="1_l2yp3"]
+
+[node name="Control" type="FlowContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" parent="." instance=ExtResource("1_l2yp3")]
+layout_mode = 2

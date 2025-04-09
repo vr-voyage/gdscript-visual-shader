@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4h6fxc87rdt6"]
+
+[ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_k2yro"]
+[ext_resource type="Script" path="res://shader_graph_ui.gd" id="2_excey"]
+[ext_resource type="PackedScene" uid="uid://dnhod5vem0rvw" path="res://myy_visual_shader_graph.tscn" id="3_m5y5m"]
+[ext_resource type="Script" path="res://nodes_library.gd" id="4_7igaj"]
+[ext_resource type="Script" path="res://resources/nodes_library/simple_nodes_library.gd" id="5_rirdp"]
+[ext_resource type="Script" path="res://nodes_popup_menu.gd" id="6_f0itm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knh68"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_037e6"]
+script = ExtResource("5_rirdp")
+items = {}
+
+[node name="Control" type="HSplitContainer" node_paths=PackedStringArray("graph_edit", "library", "nodes_menu")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_k2yro")
+script = ExtResource("2_excey")
+graph_edit = NodePath("GraphEdit")
+library = NodePath("Library")
+nodes_menu = NodePath("PopupMenu")
+
+[node name="GraphEdit" parent="." node_paths=PackedStringArray("debug_output", "debug_shader_output", "popup_menu") instance=ExtResource("3_m5y5m")]
+layout_mode = 2
+debug_output = NodePath("../PanelContainer/VBoxContainer/ScrollContainer/Label")
+debug_shader_output = NodePath("../PanelContainer/VBoxContainer/MarginContainer/Panel")
+popup_menu = NodePath("../PopupMenu")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_knh68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_bottom = 72
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.893269, 0.919635, 1, 1)
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 1
+
+[node name="Library" type="Node" parent="."]
+script = ExtResource("4_7igaj")
+library = SubResource("Resource_037e6")
+library_path = "res://test_files"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+script = ExtResource("6_f0itm")
+
+[connection signal="begin_node_move" from="GraphEdit" to="." method="disable_movements"]
+[connection signal="connection_drag_ended" from="GraphEdit" to="." method="enable_movements"]
+[connection signal="connection_drag_started" from="GraphEdit" to="." method="connection_drag_started"]
+[connection signal="end_node_move" from="GraphEdit" to="." method="enable_movements"]
+[connection signal="library_reloaded" from="Library" to="." method="_library_reloaded"]
+[connection signal="add_node_request" from="PopupMenu" to="." method="_add_node_name"]
+[connection signal="index_pressed" from="PopupMenu" to="PopupMenu" method="_on_popup_menu_index_pressed"]

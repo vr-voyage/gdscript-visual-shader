@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj4iteoesnr5e"]
+
+[ext_resource type="Script" path="res://moving_panel.gd" id="1_khmxu"]
+
+[sub_resource type="Gradient" id="Gradient_tjn62"]
+colors = PackedColorArray(0.65055, 0.928328, 0.977052, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eex0c"]
+gradient = SubResource("Gradient_tjn62")
+fill_from = Vector2(0.341568, 0.565284)
+
+[node name="PanelContainer" type="PanelContainer" node_paths=PackedStringArray("debug_text", "inputs_list", "outputs_list")]
+custom_minimum_size = Vector2(600, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_khmxu")
+debug_text = NodePath("Label")
+inputs_list = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/ItemList")
+outputs_list = NodePath("VBoxContainer/HBoxContainer/VBoxContainer2/ItemList")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = SubResource("GradientTexture2D_eex0c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3

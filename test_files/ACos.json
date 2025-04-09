@@ -1,0 +1,18 @@
+{
+	"category": "Trigonometry",
+	"name": "acos",
+	"description": "Cosine wave function",
+	"code": "{o1} = cos({i1});",
+	"inputs": [
+		{
+			 "name": "angle",
+			 "type": "float"
+		}
+	],
+	"outputs": [
+		{
+			"name": "result",
+			"type": "float" 
+		}
+	]
+}

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvp1vwx6lwhh"]
+
+[ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_1t5o4"]
+[ext_resource type="Script" path="res://ui/popup_select_type.gd" id="1_m3www"]
+[ext_resource type="PackedScene" uid="uid://ccinmumyt46vu" path="res://ui/button_select_type.tscn" id="2_kstw2"]
+
+[node name="Panel" type="Panel" node_paths=PackedStringArray("grid")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1t5o4")
+script = ExtResource("1_m3www")
+grid = NodePath("GridContainer")
+button_template = ExtResource("2_kstw2")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 32
+columns = 5

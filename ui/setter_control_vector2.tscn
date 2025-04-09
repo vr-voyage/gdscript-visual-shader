@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0s3ffy6mu8wj"]
+
+[ext_resource type="Script" path="res://ui/setter_control_vector2.gd" id="1_bg7sv"]
+
+[node name="SetterControlVector2" type="HBoxContainer"]
+offset_right = 67.0
+offset_bottom = 31.0
+script = ExtResource("1_bg7sv")
+
+[node name="LineEdit" type="SpinBox" parent="."]
+layout_mode = 2
+min_value = -10000.0
+max_value = 10000.0
+allow_greater = true
+allow_lesser = true
+
+[node name="LineEdit2" type="SpinBox" parent="."]
+layout_mode = 2

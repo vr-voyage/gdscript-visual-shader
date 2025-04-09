@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BoardRes" load_steps=2 format=3 uid="uid://ct0dgxj3veouo"]
+
+[ext_resource type="Script" path="res://resources/boardres.gd" id="1_0fc2c"]
+
+[resource]
+script = ExtResource("1_0fc2c")
+board_name = ""
+board_nodes = Array[Resource("res://resources/board_node.gd")]([])

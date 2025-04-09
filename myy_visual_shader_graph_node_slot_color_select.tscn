@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt17bws0siou0"]
+
+[ext_resource type="Script" path="res://myy_visual_shader_graph_node_slot_color_select.gd" id="1_fw24x"]
+
+[node name="Control" type="HBoxContainer" node_paths=PackedStringArray("label", "color_picker")]
+script = ExtResource("1_fw24x")
+label = NodePath("Label")
+color_picker = NodePath("ColorPickerButton")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2

@@ -1,0 +1,16 @@
+{
+	"category": "Builtin",
+	"name": "time",
+	"description": "Built-in Time",
+	"code": "{o1} = TIME;",
+	"inputs": [
+		{
+		}
+	],
+	"outputs": [
+		{
+			"name": "time",
+			"type": "float" 
+		}
+	]
+}
