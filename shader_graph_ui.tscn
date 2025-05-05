@@ -1,18 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4h6fxc87rdt6"]
+[gd_scene load_steps=10 format=3 uid="uid://d4h6fxc87rdt6"]
 
 [ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_k2yro"]
-[ext_resource type="Script" path="res://shader_graph_ui.gd" id="2_excey"]
+[ext_resource type="Script" uid="uid://d00o68gk8hg2a" path="res://shader_graph_ui.gd" id="2_excey"]
 [ext_resource type="PackedScene" uid="uid://dnhod5vem0rvw" path="res://myy_visual_shader_graph.tscn" id="3_m5y5m"]
-[ext_resource type="Script" path="res://nodes_library.gd" id="4_7igaj"]
-[ext_resource type="Script" path="res://resources/nodes_library/simple_nodes_library.gd" id="5_rirdp"]
-[ext_resource type="Script" path="res://nodes_popup_menu.gd" id="6_f0itm"]
+[ext_resource type="Script" uid="uid://foowx563obhn" path="res://nodes_library.gd" id="4_7igaj"]
+[ext_resource type="Script" uid="uid://b3q6bja4yj5oo" path="res://resources/myy_visual_shader_node_factory.gd" id="5_hhv6n"]
+[ext_resource type="Script" uid="uid://bgii75hg0lhy7" path="res://resources/nodes_library/simple_nodes_library.gd" id="5_rirdp"]
+[ext_resource type="Script" uid="uid://vxe2mv8h5jm5" path="res://nodes_popup_menu.gd" id="6_f0itm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knh68"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_037e6"]
 script = ExtResource("5_rirdp")
-items = {}
+items = Dictionary[String, ExtResource("5_hhv6n")]({})
 
 [node name="Control" type="HSplitContainer" node_paths=PackedStringArray("graph_edit", "library", "nodes_menu")]
 anchors_preset = 15

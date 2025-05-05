@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvp1vwx6lwhh"]
 
 [ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_1t5o4"]
-[ext_resource type="Script" path="res://ui/popup_select_type.gd" id="1_m3www"]
+[ext_resource type="Script" uid="uid://beum87ovo8qw0" path="res://ui/popup_select_type.gd" id="1_m3www"]
 [ext_resource type="PackedScene" uid="uid://ccinmumyt46vu" path="res://ui/button_select_type.tscn" id="2_kstw2"]
 
 [node name="Panel" type="Panel" node_paths=PackedStringArray("grid")]

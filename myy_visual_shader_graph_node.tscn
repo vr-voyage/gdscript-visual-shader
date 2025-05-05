@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://38g2kkvm02kl"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph_node.gd" id="1_b8wmi"]
+[ext_resource type="Script" uid="uid://dekh2fnu7bmld" path="res://myy_visual_shader_graph_node.gd" id="1_b8wmi"]
 [ext_resource type="PackedScene" uid="uid://b7k0xmdofyv50" path="res://myy_visual_shader_graph_node_slot_name_only.tscn" id="2_0ys2b"]
 
 [node name="Control" type="GraphNode"]

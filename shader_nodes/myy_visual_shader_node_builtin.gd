@@ -9,7 +9,7 @@ func set_node_info() -> Dictionary:
 		"description": "Built-in Time",
 		"inputs": [],
 		"outputs": [
-			MyyNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "time", null)
+			MyyVisualShaderNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "time", null)
 		]
 	}
 

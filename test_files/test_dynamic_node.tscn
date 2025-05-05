@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://jes1smij14vh"]
 
-[ext_resource type="Script" path="res://test_files/test_dynamic_node.gd" id="1_e2dex"]
+[ext_resource type="Script" uid="uid://dpiy8wmtr25c6" path="res://test_files/test_dynamic_node.gd" id="1_e2dex"]
 
 [node name="Control" type="MarginContainer" node_paths=PackedStringArray("ui_debug_output")]
 anchors_preset = 15

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dt17bws0siou0"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph_node_slot_color_select.gd" id="1_fw24x"]
+[ext_resource type="Script" uid="uid://idij2lxfa5v7" path="res://myy_visual_shader_graph_node_slot_color_select.gd" id="1_fw24x"]
 
 [node name="Control" type="HBoxContainer" node_paths=PackedStringArray("label", "color_picker")]
 script = ExtResource("1_fw24x")

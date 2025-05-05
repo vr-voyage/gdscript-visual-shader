@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyxcnf0lbl7lg"]
 
-[ext_resource type="Script" path="res://boardui.gd" id="1_lri8k"]
+[ext_resource type="Script" uid="uid://diqte8bu84uu" path="res://boardui.gd" id="1_lri8k"]
 [ext_resource type="PackedScene" uid="uid://c4g5h8idl1k3c" path="res://board.tscn" id="2_r77ix"]
 
 [node name="Control" type="PanelContainer" node_paths=PackedStringArray("board", "load_dialog", "save_dialog")]

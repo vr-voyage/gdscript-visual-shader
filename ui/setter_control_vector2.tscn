@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0s3ffy6mu8wj"]
 
-[ext_resource type="Script" path="res://ui/setter_control_vector2.gd" id="1_bg7sv"]
+[ext_resource type="Script" uid="uid://dkf7noblqli3f" path="res://ui/setter_control_vector2.gd" id="1_bg7sv"]
 
 [node name="SetterControlVector2" type="HBoxContainer"]
 offset_right = 67.0

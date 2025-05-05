@@ -36,14 +36,14 @@ func _ready():
 	var node_name:String = parsed_node["name"]
 	var node_code:String = parsed_node["code"]
 
-	var input_slots:Array[MyyVisualShaderNode.MyyNodePort] = []
-	var output_slots:Array[MyyVisualShaderNode.MyyNodePort] = []
+	var input_slots:Array[MyyVisualShaderNodePort] = []
+	var output_slots:Array[MyyVisualShaderNodePort] = []
 	for slot_info in parsed_node["inputs"]:
 		add_slot(slot_info, input_slots)
 	for slot_info in parsed_node["outputs"]:
 		add_slot(slot_info, output_slots)
 
-func add_slot(slot_definition:Dictionary, slots:Array[MyyVisualShaderNode.MyyNodePort]):
+func add_slot(slot_definition:Dictionary, slots:Array[MyyVisualShaderNodePort]):
 	if not slot_definition.has_all(["name","type"]):
 		return
 	var slot_name:String = slot_definition["name"]
@@ -56,7 +56,7 @@ func add_slot(slot_definition:Dictionary, slots:Array[MyyVisualShaderNode.MyyNod
 	var slot_type:VisualShaderNode.PortType = slot_type_and_default[0]
 	var default_value = slot_type_and_default[1]
 
-	slots.append(MyyVisualShaderNode.MyyNodePort.new(
+	slots.append(MyyVisualShaderNodePort.new(
 		slot_type,
 		slot_name,
 		default_value))

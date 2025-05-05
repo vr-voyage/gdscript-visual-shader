@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o8uljutswujh"]
 
-[ext_resource type="Script" path="res://slots_list_editor.gd" id="1_15hr4"]
+[ext_resource type="Script" uid="uid://cj1cwdajg5inq" path="res://slots_list_editor.gd" id="1_15hr4"]
 
 [node name="SlotList" type="VBoxContainer" node_paths=PackedStringArray("color_rect", "title_label", "items_list")]
 anchors_preset = 15

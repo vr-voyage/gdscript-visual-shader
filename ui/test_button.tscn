@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpbfmpbrrnhrs"]
 
-[ext_resource type="Script" path="res://ui/button_type_select.gd" id="1_cf80w"]
+[ext_resource type="Script" uid="uid://dybiichocxvq3" path="res://ui/button_type_select.gd" id="1_cf80w"]
 
 [node name="Control" type="Button"]
 anchors_preset = 15

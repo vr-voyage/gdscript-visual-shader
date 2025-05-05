@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bld0p40c2efwp"]
 
-[ext_resource type="Script" path="res://test_visual_shader_get_code.gd" id="1_hf3rb"]
+[ext_resource type="Script" uid="uid://vnytayap7vjf" path="res://test_visual_shader_get_code.gd" id="1_hf3rb"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("ui_material_showcase")]
 layout_mode = 3

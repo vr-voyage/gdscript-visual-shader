@@ -5,7 +5,7 @@ class_name MyyVisualShaderGraphNodeSlotVector2
 @export var label:Label
 @export var vector2_setter:SetterControlVector2
 
-func setup_for(port:MyyVisualShaderNode.MyyNodePort):
+func setup_for(port:MyyVisualShaderNodePort):
 	label.text = port.en_name.to_pascal_case()
 	vector2_setter.value_changed.connect(
 		func (new_value:Vector2):

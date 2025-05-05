@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7dqe3rk2gp8j"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph_node_slot_float.gd" id="1_r03qs"]
+[ext_resource type="Script" uid="uid://chw2tmh75u0xb" path="res://myy_visual_shader_graph_node_slot_float.gd" id="1_r03qs"]
 
 [node name="Control" type="HBoxContainer" node_paths=PackedStringArray("label", "spin_box")]
 script = ExtResource("1_r03qs")

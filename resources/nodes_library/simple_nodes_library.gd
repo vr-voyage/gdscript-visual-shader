@@ -2,30 +2,31 @@ extends Resource
 
 class_name SimpleNodesLibrary
 
-@export var items:Dictionary
+@export var items:Dictionary[String,MyyVisualShaderNodeFactory]
 
 func retrieve_register_methods() -> PackedStringArray:
 	return items.keys()
 
-func _ensure_method_name_exists_in(menu:Dictionary, method_name:String):
-	if menu.has(method_name):
-		return
-	var myy_array:Array[MyyVisualShaderDynamicNode] = []
-	menu[method_name] = {"variants": myy_array}
-
-func add_item(shader_node:MyyVisualShaderDynamicNode) -> bool:
-	var method_name:String = shader_node.en_name
-	_ensure_method_name_exists_in(items, method_name)
-	items[method_name]["variants"].append(shader_node)
+func add_item(factory:MyyVisualShaderNodeFactory) -> bool:
+	var key:String = factory.en_name
+	if items.has(key):
+		items[key].combine_with(factory)
+	else:
+		items[key] = factory
 	return true
 
-func retrieve_default_for_method(method_name:String) -> MyyVisualShaderNode:
-	if not items.has(method_name):
+func has_item(item_name:String) -> bool:
+	return items.has(item_name)
+
+func get_factory(item_name:String) -> MyyVisualShaderNodeFactory:
+	if has_item(item_name):
+		return items[item_name]
+	return null
+
+func retrieve_default_for_method(key:String) -> MyyVisualShaderNode:
+	if not items.has(key):
 		return null
-	var nodes:Array[MyyVisualShaderDynamicNode] = items[method_name]["variants"]
-	if nodes.is_empty():
-		return null
-	return nodes[0]
+	return items[key].instantiate_node()
 
 func load_json_library(json_file_content:String) -> bool:
 	var json_parser := JSON.new()
@@ -57,7 +58,7 @@ func load_json_library(json_file_content:String) -> bool:
 			printerr("Could not retrieve the definition as a Dictionary")
 			continue
 		
-		var node := MyyVisualShaderDynamicNode.from_dictionary(dict_definition)
+		var node := MyyVisualShaderNodeFactory.load_definition_dictionary(dict_definition)
 		if node == null:
 			printerr("Could not load the node definition")
 			continue

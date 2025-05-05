@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7k0xmdofyv50"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph_node_slot_name_only.gd" id="1_capby"]
+[ext_resource type="Script" uid="uid://y2liuqchfxbt" path="res://myy_visual_shader_graph_node_slot_name_only.gd" id="1_capby"]
 
 [node name="Control" type="Label" node_paths=PackedStringArray("label")]
 anchors_preset = 15

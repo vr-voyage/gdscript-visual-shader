@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkxlwmkgqp2lc"]
 
-[ext_resource type="Script" path="res://ui/button_type_select.gd" id="1_crbis"]
+[ext_resource type="Script" uid="uid://dybiichocxvq3" path="res://ui/button_type_select.gd" id="1_crbis"]
 
 [node name="TypeSelectButton" type="Button"]
 anchors_preset = 15

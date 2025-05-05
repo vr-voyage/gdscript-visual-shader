@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tasvsh3wslq8"]
 
 [ext_resource type="Theme" uid="uid://cu4batalgkugd" path="res://mobile_theme.tres" id="1_nek2h"]
-[ext_resource type="Script" path="res://test_class_listing.gd" id="2_k0w65"]
+[ext_resource type="Script" uid="uid://biljowsma8e36" path="res://test_class_listing.gd" id="2_k0w65"]
 
 [node name="Control" type="VBoxContainer" node_paths=PackedStringArray("output")]
 anchors_preset = 15

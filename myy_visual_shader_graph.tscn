@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnhod5vem0rvw"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph.gd" id="1_cvovr"]
+[ext_resource type="Script" uid="uid://ynggt8tupm7l" path="res://myy_visual_shader_graph.gd" id="1_cvovr"]
 [ext_resource type="PackedScene" uid="uid://38g2kkvm02kl" path="res://myy_visual_shader_graph_node.tscn" id="2_5blh1"]
 
 [node name="GraphEdit" type="GraphEdit"]

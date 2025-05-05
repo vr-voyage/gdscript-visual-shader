@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cu6pqpxf3a6v5"]
 
-[ext_resource type="Script" path="res://ui/popup_select_type.gd" id="1_o881d"]
+[ext_resource type="Script" uid="uid://beum87ovo8qw0" path="res://ui/popup_select_type.gd" id="1_o881d"]
 [ext_resource type="PackedScene" uid="uid://dkxlwmkgqp2lc" path="res://ui/type_select_button.tscn" id="2_5f8d3"]
 
 [node name="GridContainer" type="GridContainer"]

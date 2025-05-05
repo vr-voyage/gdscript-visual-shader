@@ -8,12 +8,12 @@ func set_node_info() -> Dictionary:
 		"category": "Shader",
 		"description": "Create a Vector3 by assembling the X, Y, Z fields separately",
 		"inputs": [
-			MyyNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "x", 0.),
-			MyyNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "y", 0.),
-			MyyNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "z", 0.)
+			MyyVisualShaderNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "x", 0.),
+			MyyVisualShaderNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "y", 0.),
+			MyyVisualShaderNodePort.new(VisualShaderNode.PORT_TYPE_SCALAR, "z", 0.)
 		],
 		"outputs": [
-			MyyNodePort.new(VisualShaderNode.PORT_TYPE_VECTOR_3D, "result", null)
+			MyyVisualShaderNodePort.new(VisualShaderNode.PORT_TYPE_VECTOR_3D, "result", null)
 		]
 	}
 

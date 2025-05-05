@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkw4qsl06xi21"]
 
-[ext_resource type="Script" path="res://myy_visual_shader_graph_node_slot_vector2.gd" id="1_7r0lv"]
+[ext_resource type="Script" uid="uid://cix6pqdbri6ti" path="res://myy_visual_shader_graph_node_slot_vector2.gd" id="1_7r0lv"]
 [ext_resource type="PackedScene" uid="uid://d0s3ffy6mu8wj" path="res://ui/setter_control_vector2.tscn" id="2_llp78"]
 
 [node name="Control" type="HBoxContainer" node_paths=PackedStringArray("label", "vector2_setter")]

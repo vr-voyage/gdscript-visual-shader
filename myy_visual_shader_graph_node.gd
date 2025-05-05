@@ -43,7 +43,7 @@ func _on_slot_updated():
 	shader_node.emit_changed()
 	shader_node_updated.emit(self)
 
-func add_port_display(port:MyyVisualShaderNode.MyyNodePort):
+func add_port_display(port:MyyVisualShaderNodePort):
 	var default_value_type:int = typeof(port.default_value)
 	var slot_setter_prefab:PackedScene = default_slot_setter
 	if default_value_type in type_setters_prefabs:
@@ -53,7 +53,7 @@ func add_port_display(port:MyyVisualShaderNode.MyyNodePort):
 	slot_setter.setup_for(port)
 	slot_setter.shader_slot_updated.connect(_on_slot_updated)
 
-func setup_port_slot(port:MyyVisualShaderNode.MyyNodePort, setters:PortSetters):
+func setup_port_slot(port:MyyVisualShaderNodePort, setters:PortSetters):
 	if port.constant:
 		return
 	var index:int = get_child_count()
@@ -62,7 +62,7 @@ func setup_port_slot(port:MyyVisualShaderNode.MyyNodePort, setters:PortSetters):
 	setters.set_color.call(index, Color.AQUA)
 	setters.set_type.call(index, port.type)
 
-func setup_port_slots(ports:Array[MyyVisualShaderNode.MyyNodePort], setters:PortSetters):
+func setup_port_slots(ports:Array[MyyVisualShaderNodePort], setters:PortSetters):
 	for port in ports:
 		setup_port_slot(port, setters)
 		
